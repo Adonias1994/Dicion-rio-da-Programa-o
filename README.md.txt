@@ -1,0 +1,9 @@
+Projeto desenvolvimento para ajudar nos estudos e aprendizagem de códigos em programação.
+
+Linguagens de programação:
+
+- HTML5
+- CSS3
+- PYTHON
+- C++
+- 

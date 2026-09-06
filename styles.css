@@ -9,14 +9,24 @@ font-family: Arial, sans-serif;
 background-color: #f4f4f9;
 color: #333;
 height: 100vh;
-display: flex;
-justify-content: center;
-align=items: center;
+padding: 40px;
+line-height: 1.6;
 }
 
 h1 {
 text-align: center;
 color: #2c3e50;
 font-size: 2.5rem;
+}
+
+p, h3 {
+margin-bottom: 20px;
+}
+
+.imagem-estilizada {
+max-width: 100%;
+height: auto;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 

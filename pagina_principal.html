@@ -6,16 +6,147 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Dicionário da Programação</title>
 
-<!-- Conexão entre o HTML e CSS externo -->
-<link rel="stylesheet" href="styles.css">
+	<!-- Conexão entre o HTML e CSS externo -->
+	<link rel="stylesheet" href="styles.css">
 
 </head>
 
 <body>
 	<header>
 	<h1>Dicionário da Programação</h1>
-	<p>Esse dicionário foi criado para ajudar no estudo da programação. Funcionando como uma espécie de glossário das linguagens de programação e preferencialmente seguindo uma ordem lógica de aprendizagem.</p>
+
+	<p>	Esse dicionário foi criado para ajudar no estudo da programação. Funcionando como uma espécie de glossário das linguagens de programação e preferencialmente seguindo uma ordem lógica de aprendizagem. Sugiro que para facilitar a localização, clique <strong>"CTRL + F"</strong> e pesquise palavras chaves ou o código propriamente dito.</p>
 	</header>
+
+	<h3><strong>HTML5:</strong></h3>
+
+	<p>	O modelo abaixo demonstra como deve ser realizado a organização de um projeto Front-End.</p>
+	<img src="organizacao.jpg" alt="Organização por convenção de um projeto Front-End." class="imagem-estilizada" >
+
+	<p>	Agora vamos começar a falar dos comandos.</p>
+
+	<p>	<strong>&lt;!DOCTYPE html&gt;</strong>: é primeiro comando/declaração que temos para que se entenda que trata-se de um HTML5.
+
+	<p>	<strong>&lt;html lang="pt-BR"></strong>: é a raiz do documento, onde todo o código do site é encapsulado. O atributo lang="pt-BR" informa aos navegadores, tradutores automáticos e leitores de tela que o idioma principal é o português do Brasil.</p>
+
+	<p>	<strong>&lt;head&gt;</strong> e <strong>&lt;/head&gt;</strong>: é a "mente" da página, cujo conteúdo é invisível para o usuário. Armazena configurações globais, links para arquivos externos (como o css) e informações lidas por mecanismos de busca (como o Google).</p>
+
+	<p>	<strong>&lt;meta charset="UTF-8"&gt;</strong>: define o padrão de codificação de texto. É ele que garante que acentos (á, é, ã) e caracteres especiais (como o ç) sejam exibidos perfeitamente, impedindo que o texto apareça com símbolos estranhos ou quebrado.</p>
+
+	<p>	<strong>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</strong>: regra essencial para a responsividade. Informa ao navegador que a largura do site deve se adaptar ao tamanho exato da tela do dispositivo (celular, tablet ou monitor) com um nível de zoom inicial de 100%.</p>
+
+	<p>	<strong>&lt;title&gt;&lt;/title&gt;</strong>: Define o nome da sua página. É o texto que fica escrito na aba superior do navegador e também o título clicável que aparece nos resultados de pesquisas na internet. Fica sempre dentro do &lt;head&gt;.</p>
+
+	<p>	<strong>&lt;body&gt;&lt;/body&gt;</strong>: É o corpo físico do site. Tudo o que será efetivamente visto e interagido pelo usuário (imagens, textos, botões, links, tabelas) deve ser colocado dentro dessa tag.</p>
+
+	<p>	<strong>&lt;h1&gt;&lt;/h1&gt;</strong> a <strong>&lt;h6&gt;&lt;/h6&gt;</strong>: Estruturam a hierarquia de títulos e subtítulos. O &lt;h1&gt; é o título principal e mais importante (por boa prática de SEO, usa-se apenas um por página). Do &lt;h2&gt; até o &lt;h6&gt;, a importância visual e estrutural vai diminuindo, servindo para organizar os subtópicos do texto.</p>
+
+	<p>	<strong>&lt;p&gt;&lt;/p&gt;</strong>: A tag de parágrafo. É usada para agrupar e exibir blocos de texto comum na tela, garantindo que o navegador entenda onde começa e termina um parágrafo.</p>
+
+	<p>	<strong>&lt;!-- --&gt;</strong>: cria um comentário no código HTML. Tudo o que é escrito dentro dessa estrutura é completamente ignorado pelo navegador e não aparece na tela para o usuário. Serve para você deixar notas, lembretes, explicar a estrutura do projeto ou até "esconder" temporariamente uma parte do código.</p>
+
+	<p>	<strong>&lt;ul&gt;&lt;/ul&gt;</strong>: Cria uma lista não ordenada (Unordered List). Deve ser usada quando a ordem dos itens não tem importância. Por padrão, o navegador exibe os elementos que estão dentro dela com marcadores visuais (aquelas clássicas bolinhas ou bullet points).</p>
+
+	<p>	<strong>&lt;ol&gt;&lt;/ol&gt;</strong>: Cria uma lista ordenada (Ordered List). É a escolha certa para quando a sequência dos itens importa, como em um tutorial passo a passo, uma receita ou um ranking. O navegador numera os itens automaticamente (1, 2, 3...) na tela.</p
+
+	<p>	<strong>&lt;li&gt;&lt;/li&gt;</strong>: Define o item da lista (List Item). É dentro dessa tag que você coloca o texto de cada tópico em si. Ela não funciona sozinha; os comandos &lt;li&gt; devem estar sempre aninhados (guardados) na parte de dentro das tags pai &lt;ul&gt; ou &lt;ol&gt;.</p>
+
+	<p>	<strong>&lt;table&gt;&lt;/table&gt;</strong>: É o contêiner principal para a criação de uma tabela. Todos os outros elementos que compõem a estrutura da tabela precisam obrigatoriamente estar dentro dessa tag.</p>
+
+	<p>	<strong>&lt;thead&gt;&lt;/thead&gt;</strong>: Define o cabeçalho da tabela (Table Head). Serve para agrupar a parte superior da tabela, separando semanticamente a linha que contém os títulos das colunas do restante dos dados.</p>
+
+	<p>	<strong>&lt;tbody&gt;&lt;/tbody&gt;</strong>: Agrupa o corpo principal da tabela (Table Body). É dentro dele que ficarão os dados reais, separando o conteúdo em si do cabeçalho.</p>
+
+	<p>	<strong>&lt;tr&gt;&lt;/tr&gt;</strong>: Cria uma linha horizontal na tabela (Table Row). Para cada nova "linha" que você quiser desenhar na sua tabela (seja no cabeçalho ou no corpo), você deve abrir e fechar uma tag &lt;tr&gt;.</p>
+
+	<p>	<strong>&lt;th&gt;&lt;/th&gt;</strong>: Define uma célula de cabeçalho (Table Header). Fica dentro do <tr> do cabeçalho. O navegador entende que é um título e, por padrão, exibe o texto dentro dela em negrito e centralizado.</p>
+
+	<p>	<strong>&lt;td&gt;&lt;/td&gt;</strong>: Define uma célula de dados padrão (Table Data). É aqui que a informação real (texto, número, imagem, etc.) é inserida. Vários <td> são colocados lado a lado dentro de um <tr> para formar as colunas de uma linha comum.</p>
+
+	<p>	<strong>&lt;article&gt;&lt;/article&gt;</strong>: Define um bloco de conteúdo independente e autossuficiente na página. É usado para elementos que fariam sentido sozinhos caso fossem lidos fora de contexto ou compartilhados em outro lugar, como uma postagem de blog, uma notícia, um produto de loja virtual ou um comentário em um fórum.</p>
+
+	<p>	<strong>&lt;header&gt;&lt;/header&gt;</strong>: Representa o cabeçalho de uma página inteira ou de blocos específicos (como um &lt;article&gt; ou &lt;section&gt;). Serve para agrupar elementos introdutórios, como o título do texto, um subtítulo, logotipo, nome do autor ou botões de navegação.</p>
+
+	<p>	<strong>&lt;time datetime="ano-mês-dia"&gt;&lt;/time&gt;</strong>: Utilizado para marcar datas e horários de forma semântica (com significado). O atributo datetime guarda a data em um formato global (ano-mês-dia) perfeito para leitores de tela e motores de busca (como o Google) entenderem cronologias, enquanto a data amigável para humanos é escrita entre as tags.</p>
+
+	<p>	<strong>&lt;section&gt;&lt;/section&gt;</strong>: Define uma seção temática dentro do documento. Funciona para agrupar conteúdos que compartilham o mesmo assunto, atuando como os "capítulos" de um livro ou os diferentes blocos informativos de uma mesma página (geralmente introduzidos por um título próprio, como &lt;h2&gt; ou &lt;h3&gt;).</p>
+
+	<p>	<strong>&lt;footer&gt;&lt;/footer&gt;</strong>: Representa o rodapé de uma página, de um artigo ou de uma seção. É o espaço de fechamento reservado para informações auxiliares ou de encerramento, como direitos autorais (copyright), links institucionais, contatos, assinaturas do autor ou links para redes sociais.</p>
+
+	<p>	<strong>&lt;main&gt;&lt;/main&gt;</strong>: Define o conteúdo principal e mais importante da página. É o coração do documento, onde fica a informação central que o usuário veio buscar (como o texto principal do artigo, o painel do usuário ou os produtos principais). Por regra estrutural, só deve existir uma tag principal visível por página, e ela não deve conter conteúdos repetitivos do site, como barras de navegação ou logotipos.</p>
+
+	<p>	<strong>&lt;aside&gt;&lt;/aside&gt;</strong>: Define um conteúdo secundário ou complementar que está indiretamente relacionado ao conteúdo principal ao seu redor. É classicamente utilizado para criar barras laterais (sidebars), blocos de anúncios, listas de links sugeridos, caixas de citação em destaque ou biografia do autor. Se esse bloco for removido da tela, a compreensão do conteúdo principal não deve ser prejudicada.</p>
+
+	<p>	<strong>&lt;form&gt;&lt;/form&gt;</strong>: Define um formulário interativo para a coleta de dados do usuário. É o contêiner principal que agrupa os campos de entrada, opções e botões antes de enviar as informações preenchidas para processamento.</p>
+
+	<p>	<strong>&lt;fieldset&gt;&lt;/fieldset&gt;</strong>: Agrupa logicamente campos e rótulos relacionados dentro de um formulário. O navegador costuma desenhar uma linha ao redor dos elementos agrupados, ajudando na organização visual e na acessibilidade do site.</p>
+
+	<p>	<strong>&lt;legend&gt;&lt;/legend&gt;</strong>: Fornece um título ou legenda explicativa para o grupo de elementos criado pelo &lt;fieldset&gt;. Obrigatoriamente, deve ser a primeira tag logo após a abertura do fieldset.</p>
+
+	<p>	<strong>&lt;label for=""&gt;&lt;/label&gt;</strong>: Define um rótulo descritivo para um campo de formulário. O atributo for vincula este texto ao id de um &lt;input&gt;, permitindo que o usuário clique no texto para focar e selecionar o campo correspondente.</p>
+
+	<p>	<strong>&lt;input type="text"&gt;</strong>: Cria um campo padrão de entrada de texto em uma única linha. A adição do atributo required exige que o usuário preencha este campo obrigatoriamente antes de enviar o formulário.</p>
+
+	<p>	<strong>&lt;input type="tel"&gt;</strong>: Cria um campo de texto especificamente otimizado para inserir números de telefone. Pode ser combinado com o atributo pattern para limitar o preenchimento a um formato exato usando expressões regulares (como a inclusão de traços e quantidade de números).</p>
+
+	<p>	<strong>&lt;input type="number"&gt;</strong>: Cria um campo numérico onde só é permitido digitar números. Os atributos min e max estabelecem, respectivamente, o limite mínimo e o máximo do valor que o sistema deve aceitar.</p>
+
+	<p>	<strong>&lt;input type="color"&gt;</strong>: Exibe um seletor visual de cores (color picker). O usuário pode escolher uma cor através de uma paleta interativa e o sistema armazena o valor correspondente no formato hexadecimal (ex: #000000).</p>
+
+	<p>	<strong>&lt;input type="range"&gt;</strong>: Cria um controle deslizante (slider) interativo para que o usuário escolha um valor numérico aproximado. Também utiliza os atributos min e max para delimitar as extremidades da barra deslizante.</p>
+
+	<p>	<strong>&lt;button type="submit"&gt;&lt;/button&gt;</strong>: Cria um botão de envio. Quando clicado, ele valida se todas as exigências do formulário (como campos required, min e max) foram cumpridas e, em caso positivo, dispara os dados para onde devem ser processados.</p>
+
+	<p>	<strong>&lt;details&gt;&lt;/details&gt;</strong>: Cria um widget interativo de ocultar/mostrar (semelhante a uma sanfona). O conteúdo dentro dessa tag fica escondido por padrão e só é revelado na tela quando o usuário clica sobre ele.</p>
+
+	<p>	<strong>&lt;summary&gt;&lt;/summary&gt;</strong>: Define o título visível ou o rótulo clicável para a tag &lt;details&gt;. É o texto principal que o usuário enxerga e no qual ele clica para expandir ou recolher o conteúdo oculto.</p>
+
+	<p>	<strong>&lt;datalist&gt;&lt;/datalist&gt;</strong>: Fornece uma lista de opções predefinidas (sugestões) para um campo de entrada de texto. Funciona como um recurso de autocompletar, exibindo as opções enquanto o usuário digita, mas ainda permitindo que ele escreva um valor diferente se quiser.</p>
+
+	<p>	<strong>&lt;option value=""&gt;&lt;/option&gt;</strong>: Define cada uma das opções individuais que aparecem dentro de um &lt;datalist&gt; ou de um menu de seleção. O atributo value determina qual é o dado real que o formulário enviará caso aquela opção seja escolhida.</p>
+
+	<p>	<strong>&lt;input list=""&gt;</strong>: A adição do atributo list em um campo de entrada é o que cria a conexão entre esse campo e o &lt;datalist&gt;. O valor desse atributo deve ser exatamente igual ao id da lista correspondente para que as sugestões funcionem.</p>
+
+	<p>	<strong>&lt;input pattern=""&gt;</strong>: Define uma expressão regular (RegEx) à qual o valor digitado pelo usuário deve corresponder para ser aceito. Muito utilizado para forçar a formatação correta de dados como CPF, CEP e telefones.</p>
+
+	<p>	<strong>&lt;input placeholder=""&gt;</strong>: Exibe um texto de dica temporário em tom de cinza dentro do campo vazio, dando ao usuário um exemplo visual de como a informação deve ser preenchida (ex: "000.000.000-00").</p>
+
+	<p>	<strong>&lt;input title=""&gt;</strong>: Fornece um texto descritivo que costuma aparecer como uma "dica de ferramenta" (tooltip) quando o usuário passa o mouse por cima do campo ou quando digita algo fora do padrão exigido pelo pattern.</p>
+
+	<p>	<strong>&lt;video controls poster=""&gt;&lt;/video&gt;</strong>: Incorpora um player de vídeo nativo na página. O atributo controls exibe a barra de reprodução (play, volume, tela cheia), e o poster define a imagem de capa exibida antes do vídeo começar.</p>
+
+	<p>	<strong>&lt;source src="" type=""&gt;</strong>: Utilizado dentro das tags de áudio e vídeo para listar diferentes formatos do mesmo arquivo (mp4, webm, ogg). O navegador tenta carregar o primeiro da lista e, se não for compatível, passa para o próximo.</p>
+
+	<p>	<strong>JavaScript para Controle de Vídeo (Métodos)</strong>: Utilizando o DOM (ex: document.getElementById), o JavaScript permite comandar o vídeo sem intervenção do usuário, ativando a reprodução com .play(), paralisando com .pause() e recarregando o arquivo com .load().</p>
+
+	<p>	<strong>JavaScript para Controle de Vídeo (Propriedades)</strong>: Permite a alteração dinâmica de atributos do vídeo, como avançar para um segundo específico usando .currentTime, ajustar a altura do som usando .volume e acelerar a exibição com .playbackRate.</p>
+
+	<p>	<strong>JavaScript para Controle de Vídeo (Eventos)</strong>: Com o .addEventListener(), o código "escuta" momentos chave do player para executar funções, como o início do download do arquivo (loadstart), a disponibilidade para tocar (canplay), o fim da mídia (ended) ou falhas (error).</p>
+
+	<p>	<strong>&lt;audio controls preload="metadata"&gt;&lt;/audio&gt;</strong>: Incorpora um player nativo apenas de som. O atributo preload="metadata" orienta o navegador a baixar previamente apenas as informações vitais do arquivo (como a duração total), poupando dados do usuário.</p>
+
+	<p>	<strong>&lt;iframe src=""&gt;&lt;/iframe&gt;</strong>: Permite embutir (incorporar) outra página da web ou widgets de terceiros dentro do seu site, criando um "quadro" independente. Muito utilizado para colocar vídeos do YouTube ou mapas do Google Maps.</p>
+
+	<p>	<strong>&lt;object data="" type=""&gt;&lt;/object&gt;</strong>: Usado para incorporar arquivos multimídia ou documentos externos na página. No exemplo, é utilizado para renderizar um documento PDF. O texto dentro da tag serve como "plano B" (fallback) caso o navegador não suporte a exibição.</p>
+
+	<p>	<strong>&lt;canvas id=""&gt;&lt;/canvas&gt;</strong>: Cria uma área de desenho (uma tela em branco) na página HTML, na qual você pode renderizar gráficos complexos 2D, jogos ou animações manipulando cada pixel através do JavaScript.</p>
+
+	<p>	<strong>JavaScript para Canvas (Contexto e Formas)</strong>: O método .getContext('2d') fornece as ferramentas de desenho. Através dele, estipula-se cores de fundo ou de borda (fillStyle e strokeStyle) e desenha-se retângulos (fillRect) ou círculos matemáticos (arc).</p>
+
+	<p>	<strong>JavaScript para Canvas (Gradientes e Textos)</strong>: É possível gerar degrade de cores definindo pontos de parada com .createLinearGradient() e .addColorStop(). Também é possível "carimbar" textos estilizados na tela usando as propriedades .font e .fillText().</p>
+
+	<p>	<strong>&lt;svg&gt;&lt;/svg&gt;</strong>: Define um contêiner para gráficos vetoriais escaláveis (Scalable Vector Graphics). Diferente do Canvas, o SVG não usa pixels, mas sim equações matemáticas para criar formas, o que permite que ele seja ampliado infinitamente sem perder resolução.</p>
+
+	<p>	<strong>&lt;rect&gt;, &lt;circle&gt; e &lt;line&gt; (Tags do SVG)</strong>: São os componentes geométricos internos do SVG, desenhados por coordenadas (x, y) no plano bidimensional, podendo receber preenchimento (fill), opacidade (opacity) e espessura de traço (stroke-width).</p>
+
+	<p>	<strong>&lt;path&gt; e &lt;polygon&gt; (Tags do SVG)</strong>: Permitem desenhar formas mais complexas. A tag &lt;path&gt; desenha curvas conectando pontos matemáticos (como Curvas de Bezier), e a tag &lt;polygon&gt; desenha formas fechadas de múltiplos lados (como uma estrela) unindo os pontos listados.</p>
+
+	<p>	<strong>CSS para Estilização de SVG</strong>: Arquivos e tags SVG podem ser diretamente manipulados pelo CSS da mesma forma que o HTML comum. Pode-se adicionar transições suaves (transition) e alterar seu formato ou cor quando o usuário passar o mouse (:hover).</p>
+
+	<p>	<strong>CSS para Ícones SVG (currentColor)</strong>: Ao definir a propriedade fill: currentColor via CSS, o elemento gráfico SVG passa a herdar automaticamente a cor do texto do bloco onde ele está inserido. Isso é extremamente útil para a criação de ícones que mudam de cor junto com o texto em "Dark Modes".</p>
+
+	<p>	<strong>JavaScript para Animação (requestAnimationFrame)</strong>: A função nativa requestAnimationFrame() cria um loop otimizado e suave de atualização de tela de acordo com a taxa de atualização do monitor do usuário. Junto com ctx.clearRect() (que limpa o desenho anterior), é a base para movimentar elementos dinamicamente no Canvas.</p>
+
 </body>
 
 </html>
